@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pandas yfinance
+          pip install pandas yfinance matplotlib
 
       - name: Run the data update script
         run: python $GITHUB_WORKSPACE/generate_html.py
