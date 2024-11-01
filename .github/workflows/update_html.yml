@@ -23,7 +23,8 @@ jobs:
           pip install pandas
 
       - name: Run the data update script
-        run: python ../generate_html.py
+        run: python $GITHUB_WORKSPACE/generate_html.py
+        
 
       - name: Commit and push changes
         run: |
