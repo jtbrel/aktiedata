@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pandas
+          pip install pandas yfinance
 
       - name: Run the data update script
         run: python $GITHUB_WORKSPACE/generate_html.py
