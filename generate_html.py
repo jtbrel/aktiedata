@@ -19,7 +19,7 @@ def update_data():
     tickers = yf.Tickers(tickers_list)
 
     cols = ['Earnings Date', 'Earnings High', 'Earnings Low', 'Earnings Average', 'Dividend Date', 'Ex-Dividend Date']
-    df_calendar = pd.DataFrame((tickers.tickers[i].calendar for i in tickers_list), index=tickers_list)
+    df_calendar = pd.DataFrame((tickers.tickers[i].calendar for i in tickers_list), index=tickers_list)[cols]
     html_content = f"<p>Last updated: {datetime.now()}</p>" + df_calendar.to_html(classes='table table-striped', border=0)
 
     with open("dataframe.html", "w") as f:
